@@ -19,7 +19,7 @@ max_angle = 180
 
 def send_angle(a):
     cmd = f"ANGLE:{a}\n"
-    ser.write(cmd.encode())
+    #ser.write(cmd.encode())
     print(f"send angle: {a}")
 
 def keyboard_thread():
