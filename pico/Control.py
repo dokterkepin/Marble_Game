@@ -12,12 +12,10 @@ def set_servo_angle(angle):
     max_duty = 8192
     duty = int(min_duty + (max_duty - min_duty) * angle / 180)
     servo.duty_u16(duty)
-
 set_servo_angle(winkel)
 
 while True:
     line = sys.stdin.readline().strip()
-    print(line)
     if line.startswith("ANGLE:"):
         try:
             winkel = int(line.split(":")[1])
@@ -26,9 +24,10 @@ while True:
                 set_servo_angle(winkel)
         except:
             pass
-    elif line.startswith("POSE:"):
+    elif line.startswith("POS:"):
         try:
-            coordinates = int(line.split(":")[1])
-            print(coordinates)
+            line = line.replace("POS:", "")
+            x, y = map(int, line.split(","))
+            print(x, y)
         except:
             pass
