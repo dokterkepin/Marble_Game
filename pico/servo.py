@@ -12,7 +12,6 @@ servo2.freq(50)
 servo3.freq(50)
 servo4.freq(50)
 
-# Initial angles
 angle1 = 90
 angle2 = 90
 angle3 = 90
@@ -39,7 +38,6 @@ while True:
             a2 = int(parts[1].split(":")[1])
             a3 = int(parts[2].split(":")[1])
             a4 = int(parts[3].split(":")[1])
-            print(a3, a4)
             if 0 <= a1 <= 180:
                 angle1 = a1
                 set_servo_angle(servo1, angle1)

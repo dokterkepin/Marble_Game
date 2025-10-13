@@ -6,7 +6,7 @@ ser = serial.Serial("/dev/ttyACM0", 115200)
 # Servo Setup
 servo1_angle = 90
 servo2_angle = 90
-servo3_angle = 90
+servo3_angle = 95
 servo4_angle = 90
 
 step = 1
