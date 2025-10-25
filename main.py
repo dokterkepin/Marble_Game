@@ -14,6 +14,3 @@ manual_thread = threading.Thread(target=run_manual)
 
 detection_thread.start()
 manual_thread.start()
-
-
-
